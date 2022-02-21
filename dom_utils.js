@@ -19,22 +19,16 @@
  *
  * Note, that this function only works browser-side.
  *
- * @param  {String} html HTML string to be parsed
- * @param  {Boolean} sandbox Sandox parsing in a temporary document
+ * @param {String} html HTML string to be parsed
+ * @param {Boolean} sandbox Sandox parsing in a temporary document
  * @return {NodeList} Static list of the parsed DOM nodes
  */
 export function parseHtml(html, sandbox) {
-    let doc = sandox ? document : new Document();
+    let doc = sandbox ? document : new Document();
     let element = doc.createElement("div");
 
     element.innerHTML = html;
-    let nodes = element.querySelectorAll("*");
-
-    for (let node of nodes) {
-        node.remove();
-    }
-
-    return nodes;
+    return element.querySelectorAll(":scope > *");
 }
 
 export default {
