@@ -22,7 +22,7 @@ Module string_utils
 Utility functions to work with multi-line strings.
 
 ```javascript
-import StringUtils from "ls-utils/string_utils.js";
+import StringUtils from "@dschulmeis/ls-utils/string_utils.js";
 ```
 
  * `function escapeHTML(html)`: <br/>
@@ -63,7 +63,7 @@ Module dom_utils
 Browser-side utility functions for DOM manipulation.
 
 ```javascript
-import DOMUtils from "ls-utils/dom_utils.js";
+import DOMUtils from "@dschulmeis/ls-utils/dom_utils.js";
 ```
 
  * `function parseHtml(html, sandbox)`: <br/>
@@ -76,7 +76,7 @@ Class ObservableValue
 ---------------------
 
 ```javascript
-import ObservableValue from "ls-utils/observable_value.js";
+import ObservableValue from "@dschulmeis/ls-utils/observable_value.js";
 ```
 
 This is a simple utility class which allows to define a simple kind of
