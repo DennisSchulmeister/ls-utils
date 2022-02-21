@@ -23,7 +23,7 @@
  * @param  {Boolean} sandbox Sandox parsing in a temporary document
  * @return {NodeList} Static list of the parsed DOM nodes
  */
-function parseHtml(html, sandbox) {
+export function parseHtml(html, sandbox) {
     let doc = sandox ? document : new Document();
     let element = doc.createElement("div");
 

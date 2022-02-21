@@ -10,7 +10,7 @@
  * @param  {String} html Raw HTML string
  * @return {String} Escaped HTML string
  */
-function escapeHTML(html) {
+export function escapeHTML(html) {
     return html.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 }
 
@@ -27,7 +27,7 @@ function escapeHTML(html) {
  * @param  {String} text Original text
  * @return {String} Linebreak sequence
  */
-function determineLinebreaks(text) {
+export function determineLinebreaks(text) {
     if (text.includes("\r\n")) return "\r\n";
     else if (text.includes("\n")) return "\n";
     else if (text.includes("\r")) return "\r";
@@ -43,7 +43,7 @@ function determineLinebreaks(text) {
  * @param  {String} text Original text
  * @return {String} Shifted text
  */
-function shiftLinesLeft(text) {
+export function shiftLinesLeft(text) {
     // Determine type of linebreak
     let lines = [];
 
@@ -85,7 +85,7 @@ function shiftLinesLeft(text) {
  * @param  {String} text Original text
  * @return {String} Trimmed text
  */
-function removeLeadingLinebreaks(text) {
+export function removeLeadingLinebreaks(text) {
     let linebreak = determineLinebreaks(text);
     if (linebreak === "") return text;
 
@@ -102,7 +102,7 @@ function removeLeadingLinebreaks(text) {
  * @param  {String} text Original text
  * @return {String} Trimed text
  */
-function removeTrailingLinebreaks(text) {
+export function removeTrailingLinebreaks(text) {
     let linebreak = determineLinebreaks(text);
     if (linebreak === "") return text;
 
@@ -119,7 +119,7 @@ function removeTrailingLinebreaks(text) {
  * @param  {String} text Original text
  * @return {String} Trimed text
  */
-function trimLines(text) {
+export function trimLines(text) {
     let lines = [];
 
     let linebreak = determineLinebreaks(text);
@@ -160,7 +160,7 @@ function trimLines(text) {
  * @param  {String} text Original text
  * @return {String} Trimed text
  */
-function removeSurroundingWhitespace(text) {
+export function removeSurroundingWhitespace(text) {
     let before = "";
 
     do {
