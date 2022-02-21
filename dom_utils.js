@@ -7,7 +7,7 @@
 
 /**
  * Replacement for jQuery's parseHtml function. Takes a html string as input
- * and returns NodeList of the parsed DOM nodes. For this a temporary dummy
+ * and returns a NodeList of the parsed DOM nodes. For this a temporary dummy
  * element whose `innerHTML` is set is used.
  *
  * Normaly, this element will be part of the root document which is fine, if

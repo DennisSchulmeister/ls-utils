@@ -68,7 +68,7 @@ import DOMUtils from "ls-utils/dom_utils.js";
 
  * `function parseHtml(html, sandbox)`: <br/>
  Replacement for jQuery's parseHtml function. Takes a html string as input
- and returns NodeList of the parsed DOM nodes. Optionaly the parsing can
+ and returns a NodeList of the parsed DOM nodes. Optionaly the parsing can
  be sandboxed in a temporary document to isolate contained JavaScript code
  from the root document.
 
