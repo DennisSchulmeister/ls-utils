@@ -1,6 +1,6 @@
 {
-    "name": "ls-utils",
-    "version": "1.0.0",
+    "name": "@dschulmeis/ls-utils",
+    "version": "1.0.1",
     "description": "",
     "author": "Dennis Schulmeister-Zimolong",
     "license": "BSD-2-Clause",
@@ -14,5 +14,8 @@
         "utilities",
         "string manipulation",
         "dom manipulation"
-    ]
+    ],
+    "scripts": {
+        "do-publish": "npm publish --access=public"
+    }
 }
