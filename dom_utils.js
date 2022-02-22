@@ -12,16 +12,16 @@
  *
  * Note, that this function only works browser-side. Also note, that only
  * trusted content should be used with this function. If the HTML code is
- * comming from an external source, don't use this function, as the HTML code
+ * coming from an external source, don't use this function, as the HTML code
  * could execute harmful JavaScript code!
  *
  * @param {String} html HTML string to be parsed
- * @return {NodeList} Static list of the parsed DOM nodes
+ * @return {HTMLCollection} Static list of the parsed DOM nodes
  */
 export function parseHtml(html) {
-    let element = document.createElement("div");
+    let element = document.createElement("template");
     element.innerHTML = html;
-    return element.querySelectorAll(":scope > *");
+    return element.content.children;
 }
 
 export default {
