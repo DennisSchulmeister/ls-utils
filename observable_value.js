@@ -5,7 +5,7 @@
  */
 "use strict";
 
-import StringUtils from "./utils.js";
+import StringUtils from "./string_utils.js";
 
 /**
  * This is a simple utility class which allows to define a simple kind of
