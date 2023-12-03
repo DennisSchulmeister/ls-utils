@@ -16,7 +16,7 @@ import StringUtils from "./string_utils.js";
  *   * Plain functions, called like func(newValue, oldValue)
  *   * DOM elements whose innerHTML will be updated (with or without HTML escaping)
  *
- * Additionaly, validator functions can be attached to check whether a
+ * Additionally, validator functions can be attached to check whether a
  * changed value is allowed. If any validator rejects the change, the old
  * value will be kept and no observers will be called.
  */
