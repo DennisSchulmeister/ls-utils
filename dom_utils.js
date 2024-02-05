@@ -24,6 +24,46 @@ export function parseHtml(html) {
     return element.content.children;
 }
 
+/**
+ * Copy all attribute values from the source element to the destination
+ * elements.
+ *
+ * @param {DOMElement} srcElement Source element
+ * @param {DOMElement} dstElement Destination element
+ */
+export function copyAttributes(srcElement, dstElement) {
+    for (let i = 0; i < srcElement.attributes.length; i++) {
+        let attribute = srcElement.attributes[i];
+
+        if (attribute.name.toLowerCase() === "class") {
+            // Special treatment for class attribute
+            for (let classname of attribute.value.split(" ")) {
+                dstElement.classList.add(classname);
+            }
+        } else {
+            // All other attributes can simply be overwritten
+            dstElement.setAttribute(attribute.name, attribute.value);
+        }
+    }
+}
+
+/**
+ * Moves all child nodes from one parent element to another, without
+ * copying them.
+ *
+ * @param {DOMElement} srcElement Source element
+ * @param {DOMElement} dstElement Destination element
+ */
+export function moveChildNodes(srcElement, dstElement) {
+    let len = srcElement.childNodes.length;
+
+    for (let i = 0; i < len; i++) {
+        dstElement.append(srcElement.childNodes[0]);
+    }
+}
+
 export default {
     parseHtml,
+    copyAttributes,
+    moveChildNodes,
 }
