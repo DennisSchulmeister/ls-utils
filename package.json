@@ -15,6 +15,9 @@
         "string manipulation",
         "dom manipulation"
     ],
+    "publishConfig": {
+        "access": "public"
+    },
     "scripts": {
         "do-publish": "npm publish --access=public"
     }
